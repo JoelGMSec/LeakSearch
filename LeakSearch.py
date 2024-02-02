@@ -61,7 +61,7 @@ def find_leaks_local_db(database, keyword, number):
                 exit(-1)
     else:
         file_length = os.path.getsize(database)
-        block_size = 123456
+        block_size = 1
         line_count = 0
         results = []
 
@@ -77,13 +77,13 @@ def find_leaks_local_db(database, keyword, number):
                     filtered_block = [line for line in block if keyword.lower() in line.lower()]
                     results.extend(filtered_block)
 
-                    print(colored(f"\r[*] Reading {line_count} lines in database", "magenta"), end='', flush=True)
+                    print(colored(f"\r[*] Reading {line_count} lines in database..", "magenta"), end='', flush=True)
 
                     if number is not None and len(results) >= number:
                         break
 
         except KeyboardInterrupt:
-            print (colored("\n[!] Exiting..", "red"))
+            print (colored("\n[!] Exiting..\n", "red"))
             exit(-1)
 
         except:
@@ -151,8 +151,9 @@ if __name__ == '__main__':
         print(colored("[!] Can't connect to service! Check your internet connection!\n", "red"))
     
     except KeyboardInterrupt:
-        print (colored("\n[!] Exiting..", "red"))
+        print (colored("\n[!] Exiting..\n", "red"))
         exit(-1)
 
     except Exception as e:
         print(colored(f"\n[!] Error: {e}\n", "red"))
+      
