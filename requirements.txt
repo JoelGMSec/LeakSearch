@@ -2,3 +2,4 @@ urllib3
 argparse
 tabulate
 neotermcolor
+requests
