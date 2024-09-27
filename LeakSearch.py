@@ -14,14 +14,14 @@ from neotermcolor import colored
 from requests import ConnectionError
 urllib3.disable_warnings()
 
-banner = """
+banner = r"""
   _               _     ____                      _     
  | |    ___  __ _| | __/ ___|  ___  __ _ _ __ ___| |__  
  | |   / _ \/ _` | |/ /\___ \ / _ \/ _` | '__/ __| '_ \ 
  | |__|  __/ (_| |   <  ___) |  __/ (_| | | | (__| | | |
  |_____\___|\__,_|_|\_\|____/ \___|\__,_|_|  \___|_| |_|"""
 
-banner2 = """                                               
+banner2 = r"""                                               
   ------------------- by @JoelGMSec -------------------
   """
 
